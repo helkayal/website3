@@ -1,0 +1,477 @@
+:root {
+    --dark-green: #304F47;
+    --dark-green-40: rgba(48, 79, 71, .4);
+    --dark-green-80: rgba(48, 79, 71, .8);
+    --dark-yellow: #C7923E;
+    --light-bg: #e0e0e0;
+    --light-grey: #c3c3c3;
+    --dark-grey: #515151;
+    --txt-white: #fff;
+    --txt-black: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(#fff);
+}
+
+.yellow-btn {
+    background-color: var(--dark-yellow);
+    color: var(--light-clr);
+    border: 1px solid var(--dark-green);
+}
+
+.yellow-btn:hover {
+    background-color: var(--light-grey);
+    color: var(--light-clr);
+    border: 1px solid var(--dark-yellow);
+}
+
+
+.green-btn {
+    background-color: var(--dark-green);
+    color: var(--dark-yellow);
+    border: 1px solid var(--dark-yellow);
+}
+
+.green-btn:hover {
+    background-color: var(--dark-yellow);
+    color: var(--light-clr);
+    border: 1px solid var(--dark-green);
+}
+
+.section-header .title-yellow {
+    color: var(--dark-yellow);
+}
+
+.section-header .title-black {
+    color: var(--dark-grey);
+}
+
+/* ============ top-bar =============== */
+/* ------------- toprow -------------- */
+.top-bar .toprow-container {
+    background-color: var(--dark-green);
+    opacity: 0.9;
+    height: 44px;
+    width: 100%;
+}
+
+/* ------------- end toprow -------------- */
+
+
+/* ----------- navbar ------------- */
+
+.navbar {
+    background-color: rgba(216, 216, 216, 0.5);
+}
+
+.navbar ul li a.active {
+    font-weight: bold;
+}
+
+.navbar ul li a.nav-link {
+    color: var(--txt-black);
+}
+
+.navbar ul li a:hover {
+    color: var(--dark-yellow);
+}
+
+/* ------------- end navbar ---------------- */
+/* ============ end top-bar =============== */
+
+.modal-header {
+    background-color: var(--dark-green);
+}
+
+.modal-body {
+    background-color: var(--light-bg);
+}
+
+.login-card {
+    background-color: inherit;
+    border: 0px;
+}
+
+/* ============ main =============== */
+
+/* ------------------- right-bar ------------- */
+.aside-container {
+    z-index: 200;
+}
+
+.right-bar-item-container {
+    right: 20px;
+}
+
+.right-bar-item svg {
+    color: var(--dark-green-40);
+    opacity: .8;
+}
+
+.right-bar-item svg:hover {
+    color: var(--dark-green-80);
+    opacity: .8;
+}
+
+/* --------------------- end right-bar ------------- */
+
+/* ------------------ hero ---------------- */
+.c-item {
+    height: 408px;
+}
+
+.c-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-details {
+    color: var(--light-grey);
+    --bs-bg-opacity: .5;
+}
+
+.hero-search {
+    background: var(--dark-green);
+    position: relative;
+    top: -25px;
+}
+
+.hero-search .search-grooup {
+    width: 100%;
+}
+
+.hero-search .txt-search {
+    height: 50px;
+}
+
+.hero-search .txt-search:focus {
+    box-shadow: none;
+    border: 0px;
+}
+
+.hero-search .guest-sel {
+    background-color: var(--dark-green);
+    border: 0px;
+    width: 120px;
+    color: var(--txt-white);
+}
+
+.hero-search .guest-sel:focus {
+    box-shadow: none;
+    border: 0px;
+}
+
+/* --------------- end hero --------------- */
+/* ============ end main =============== */
+
+
+/* ================ package section =============== */
+.package-card {
+    border: 0px;
+}
+
+.package-body {
+    border: 1px solid var(--light-grey);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.package-card::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 10;
+    background-color: var(--dark-green-40);
+    border-radius: 10px;
+}
+
+.package-card:hover::after {
+    width: calc(100% - 22px);
+    height: 100%;
+    transition: 1s;
+}
+
+.package-card:before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 10px;
+    background-color: var(--dark-green-40);
+    border-radius: 10px;
+}
+
+.package-card:hover:before {
+    width: calc(100% - 22px);
+    height: 100%;
+    transition: 1s;
+}
+
+/* ================ END package section =============== */
+
+
+
+/* ======================= fixed 1 section ====================== */
+
+.fixed1 .fixed-content {
+    background-image: url(../images/fixed1.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 300px;
+}
+
+/* ======================= end fixed 1 section ====================== */
+
+
+/* ===================== popular destinations ====================== */
+.accordion {
+    --bs-accordion-active-color: var(--dark-yellow);
+    --bs-accordion-active-bg: var(--dark-green-80);
+    --bs-accordion-color: var(--dark-green);
+    --bs-accordion-bg: var(--light-bg);
+    --bs-accordion-btn-focus-box-shadow: none;
+}
+
+.accordion-button {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--dark-grey);
+    background-color: var(--dark-green-40);
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0%) invert(75%);
+}
+
+.img-flag {
+    height: 30px;
+    border-radius: 10px;
+}
+
+.dest-card {
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px var(--dark-green-40);
+}
+
+.dest-card .dest-card-title {
+    width: 50px;
+    height: 4px;
+    background-color: var(--dark-green-80);
+}
+
+.dest-card:hover .card-img {
+    transform: scale(1.2);
+    transition: all .5s;
+}
+
+.dest-card:hover .dest-card-title {
+    width: 70px;
+    transition: all .3s;
+}
+
+.card-img-right-div{
+    border-radius: 20px;
+    clip-path: polygon(33% 0, 100% 0, 100% 100%, 10% 100%);
+}
+
+.dest-card-img-right {
+    object-fit: cover;
+    border-radius: 20px;
+    clip-path: polygon(33% 0, 100% 0, 100% 100%, 10% 100%);
+}
+
+.card-img-left-div{
+    border-radius: 20px;
+    clip-path: polygon(0 0, 70% 0, 90% 100%, 0 100%);
+}
+
+.dest-card-img-left {
+    object-fit: cover;
+    border-radius: 20px;
+    clip-path: polygon(0 0, 70% 0, 90% 100%, 0 100%);
+}
+
+/* ===================== end popular destinations ====================== */
+
+/* ===================== popular cities section =================== */
+.city {
+    background-size: cover;
+    border-radius: 20px;
+    max-width: 340px;
+    min-width: 300px;
+    min-height: 300px;
+    position: relative;
+    transition: all 1s;
+}
+
+.cp-city {
+    background-image: url(../images/capetown.png);
+}
+
+.ma-city {
+    background-image: url(../images/marrakech.png);
+}
+
+.za-city {
+    background-image: url(../images/nairobi.jpeg);
+}
+
+.city-overlay {
+    border-radius: 20px;
+    background-color: var(--dark-green-80);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+}
+
+.city:hover {
+    transform: scale(.9);
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.city:hover .card-title {
+    color: var(--light-grey);
+    padding-top: 20px;
+    transition: all 1s;
+}
+
+.city:hover .card-text {
+    color: var(--dark-yellow);
+    transition: all 1s;
+}
+
+.city-overlay .card {
+    background: rgba(0, 0, 0, 0);
+    border: 0px;
+    height: 100%;
+}
+
+.city-overlay .card-title {
+    padding-top: 10px;
+    color: var(--dark-yellow);
+}
+
+.city-overlay .card-text {
+    color: var(--light-grey);
+}
+
+.card-img-small {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid var(--dark-yellow);
+}
+
+/* ===================== end popular cities section =================== */
+
+/* ======================= fixed 2 section ====================== */
+
+.fixed2 .fixed-content {
+    background-image: url(../images/fixed2.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 300px;
+}
+
+/* ======================= end fixed 1 section ====================== */
+
+
+/* ===================== whyus section =================== */
+.whyus-item {
+    background-color: var(--dark-green-80);
+    border-radius: 20px;
+    max-width: 240px;
+    min-height: 200px;
+}
+
+.whyus-item:hover {
+    background-color: var(--dark-green-40);
+}
+
+/* ===================== end whyus section =================== */
+
+
+/* =========================== testimonials section ===================== */
+
+.testimonial-item {
+    background-color: var(--txt-white);
+    border: 1px solid var(--light-bg);
+    box-shadow: 1px 4px var(--light-grey);
+    max-width: 300px;
+}
+
+.testimonial-item::after {
+    content: "";
+    position: absolute;
+    background-color: var(--dark-green-40);
+    width: calc(100% - 50px);
+    height: 0;
+    top: 0;
+    left: 25px;
+    transition: all 1s;
+}
+
+.testimonial-item:hover::after {
+    height: 100%;
+}
+
+.testimonial-img {
+    border-radius: 50%;
+    border: 4px solid var(--dark-green);
+    padding: 4px;
+}
+
+.testimonial-text {
+    color: var(--light-grey);
+}
+
+.testimonials-page {
+    width: 50px;
+    height: 5px;
+    background-color: var(--dark-green);
+}
+
+.testimonials-page:hover {
+    background-color: var(--dark-yellow);
+}
+
+.testimonials-page.active {
+    background-color: var(--dark-yellow);
+}
+
+/* =========================== end testimonials section ===================== */
+
+
+
+/* ========================== footer section =========================== */
+.footer-container {
+    background-color: var(--dark-green-80);
+}
+
+.bottom-bar {
+    background-color: var(--dark-green);
+}
+
+.footer-link {
+    text-decoration: none;
+    color: inherit;
+}
+.footer-link:hover{
+    color: var(--dark-yellow);
+}
+/* ========================== end footer section =========================== */
